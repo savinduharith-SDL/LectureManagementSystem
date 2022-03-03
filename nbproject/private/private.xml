@@ -5,11 +5,14 @@
         <group>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/LoginSession.java</file>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/Logout.java</file>
+            <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/APmenu1.java</file>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/Operations.java</file>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/Login.java</file>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/MySQLConnection.java</file>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/AdminDashboard.java</file>
+            <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/APmenu2.java</file>
             <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/StudentDashboard.java</file>
+            <file>file:/D:/Repos/GitHub/LectureManagementSystem/src/lecturemanagementsystem/LecturerDashboard.java</file>
         </group>
     </open-files>
 </project-private>

@@ -25,6 +25,8 @@ public class AdminDashboard extends javax.swing.JFrame {
         menu3.setBackground(DefaultColor);
         menu4.setBackground(DefaultColor);
         menu5.setBackground(DefaultColor);
+        
+        usernametxt.setText(LoginSession.AltName);
     }
 
     /**
@@ -39,6 +41,9 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        usernametxt = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         menu2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -50,7 +55,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         menu5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        AdminPanel = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -59,6 +64,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(255, 153, 51));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_close_window_48px.png"))); // NOI18N
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -66,29 +72,34 @@ public class AdminDashboard extends javax.swing.JFrame {
                 jLabel6MousePressed(evt);
             }
         });
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1082, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 1082, Short.MAX_VALUE)
-                .addComponent(jLabel6))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel6)
-                .addGap(0, 122, Short.MAX_VALUE))
-        );
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("ADMIN PANEL");
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 160, 50));
 
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, -1));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_user_50px_1.png"))); // NOI18N
+        jLabel9.setText("welcome");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 50));
+
+        usernametxt.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        usernametxt.setText("user name");
+        jPanel5.add(usernametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 230, 50));
+
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 130));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         menu2.setBackground(new java.awt.Color(0, 0, 0));
         menu2.setPreferredSize(new java.awt.Dimension(250, 50));
         menu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menu2MouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 menu2MousePressed(evt);
             }
@@ -98,7 +109,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_menu_50px.png"))); // NOI18N
-        jLabel1.setText("Menu 2");
+        jLabel1.setText("Lecturer");
 
         javax.swing.GroupLayout menu2Layout = new javax.swing.GroupLayout(menu2);
         menu2.setLayout(menu2Layout);
@@ -106,8 +117,8 @@ public class AdminDashboard extends javax.swing.JFrame {
             menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menu2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         menu2Layout.setVerticalGroup(
             menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,6 +128,9 @@ public class AdminDashboard extends javax.swing.JFrame {
         menu1.setBackground(new java.awt.Color(0, 0, 0));
         menu1.setPreferredSize(new java.awt.Dimension(250, 50));
         menu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menu1MouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 menu1MousePressed(evt);
             }
@@ -126,7 +140,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_menu_50px.png"))); // NOI18N
-        jLabel2.setText("Menu 1");
+        jLabel2.setText("Student");
 
         javax.swing.GroupLayout menu1Layout = new javax.swing.GroupLayout(menu1);
         menu1.setLayout(menu1Layout);
@@ -154,7 +168,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_menu_50px.png"))); // NOI18N
-        jLabel3.setText("Menu 3");
+        jLabel3.setText("Reports");
 
         javax.swing.GroupLayout menu3Layout = new javax.swing.GroupLayout(menu3);
         menu3.setLayout(menu3Layout);
@@ -182,7 +196,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_menu_50px.png"))); // NOI18N
-        jLabel4.setText("Menu 4");
+        jLabel4.setText("Settings");
 
         javax.swing.GroupLayout menu4Layout = new javax.swing.GroupLayout(menu4);
         menu4.setLayout(menu4Layout);
@@ -190,8 +204,8 @@ public class AdminDashboard extends javax.swing.JFrame {
             menu4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menu4Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         menu4Layout.setVerticalGroup(
             menu4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,7 +224,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lecturemanagementsystem/img/icons8_menu_50px.png"))); // NOI18N
-        jLabel5.setText("Menu 5");
+        jLabel5.setText("About us");
 
         javax.swing.GroupLayout menu5Layout = new javax.swing.GroupLayout(menu5);
         menu5.setLayout(menu5Layout);
@@ -218,8 +232,8 @@ public class AdminDashboard extends javax.swing.JFrame {
             menu5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menu5Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         menu5Layout.setVerticalGroup(
             menu5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -257,9 +271,20 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 250, 630));
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 880, 600));
+        AdminPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout AdminPanelLayout = new javax.swing.GroupLayout(AdminPanel);
+        AdminPanel.setLayout(AdminPanelLayout);
+        AdminPanelLayout.setHorizontalGroup(
+            AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 880, Short.MAX_VALUE)
+        );
+        AdminPanelLayout.setVerticalGroup(
+            AdminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(AdminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 880, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -326,6 +351,20 @@ public class AdminDashboard extends javax.swing.JFrame {
         Logout.logout(this, new Login());
     }//GEN-LAST:event_jLabel6MousePressed
 
+    private void menu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu1MouseClicked
+        // TODO add your handling code here:
+        APmenu1 apmenu1 = new APmenu1();
+        AdminPanel.removeAll();
+        AdminPanel.add(apmenu1).setVisible(true);
+    }//GEN-LAST:event_menu1MouseClicked
+
+    private void menu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu2MouseClicked
+        // TODO add your handling code here:
+        APmenu2 apmenu2 = new APmenu2();
+        AdminPanel.removeAll();
+        AdminPanel.add(apmenu2).setVisible(true);
+    }//GEN-LAST:event_menu2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -362,13 +401,15 @@ public class AdminDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JDesktopPane AdminPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
@@ -377,5 +418,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel menu3;
     private javax.swing.JPanel menu4;
     private javax.swing.JPanel menu5;
+    private javax.swing.JLabel usernametxt;
     // End of variables declaration//GEN-END:variables
 }
